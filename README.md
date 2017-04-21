@@ -22,7 +22,7 @@ server code for group project app
     * sudo apt-get install phpmyadmin<br>
   * give your user (Ubuntu user) all rights to edit the /var/www/html/ directory<br>
     * sudo chown -R %UbuntuUser%:www-data /var/www/html/<br>
-    * sudo chmod 755 /var/www/html/<br>
+    * sudo chmod 775 /var/www/html/<br>
     * sudo chmod g+s /var/www/html/<br>
     * switch to /var/www/html/ directory and run umask<br>
       * cd /var/www/html/<br>
