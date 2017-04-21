@@ -4,6 +4,7 @@ FOR FRIDAY:
 [ ] #standardize name outputs with what Sarah wants
 [ ] #copy Server Calls to reference page (reference.txt)
 [X] #how to make server (build apache and SQL instructions)
+[ ] #clear database, reset all prim keys, build samples in tables, export table to 'MySQLBuild.sql'
 
 BUGS:
 [ ] #fix SQL injection vulnerabilities
