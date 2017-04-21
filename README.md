@@ -33,7 +33,7 @@ Setting up the server for use with the app located bellow
  * add the function calls to the server
    * copy the files from this github repo into the /var/www/html/ directory
    * edit the $connection vars in all files to the login info you created for your MySQL admin
-# how to set up MySQL table 
+# How to set up MySQL tables
 * open firefox on the server
   * go to localhost/phpmyadmin
     * login and select import table
