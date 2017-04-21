@@ -1,5 +1,7 @@
 # 3380-group-project-server-code
-server code for group project app
+server code for group project app <br>
+All code on server and backups are located in this repo.<br>
+Setting up the server for use with the app located bellow
 
 
 # How to build the LAMP server
@@ -29,7 +31,8 @@ server code for group project app
       * umask<br>
         * if you get 0002 back permissions are set up correctly<br>
  * add the function calls to the server
-   * copy the files from this github repo into the /var/www/html/ directory 
+   * copy the files from this github repo into the /var/www/html/ directory
+   * edit the $connection vars in all files to the login info you created for your MySQL admin
 # how to set up MySQL table 
 * open firefox on the server
   * go to localhost/phpmyadmin
