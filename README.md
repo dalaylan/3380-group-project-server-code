@@ -2,18 +2,18 @@
 server code for group project app
 
 
-#How to build the LAMP server
+# How to build the LAMP server
 
 * use any machine that has a ubuntu partition on it<br>
-* Video link to setting up Ubuntu partition for reference: https://www.youtube.com/watch?v=i_4Kh5kE3xA<br>
-* boot into a usb flash drive that has been formated with ubuntu and follow instructions to install<br>
+  * Video link to setting up Ubuntu partition for reference: https://www.youtube.com/watch?v=i_4Kh5kE3xA<br>
+  * boot into a usb flash drive that has been formated with ubuntu and follow instructions to install<br>
 
 * set up a LAMP(Linux Apache MySQL Php) server on the machine that is hosted on localhost<br>
   * Video link to setting up LAMP server for reference: https://www.youtube.com/watch?v=K3k_q2hRaLU&list=WL&index=48<br>
   * summary of video:<br>
- *open terminal and update to latest Ubuntu packages<br>
-    *sudo apt-get update<br>
-    *sudo apt-get upgrade<br>
+ * open terminal and update to latest Ubuntu packages<br>
+    * sudo apt-get update<br>
+    * sudo apt-get upgrade<br>
   * install tasksel<br>
     * sudo apt-get install tasksel<br>
   * run tasksel and select the 'Basic Ubuntu server,' 'LAMP server," and 'print server' options and hit 'ok'<br>
@@ -28,5 +28,10 @@ server code for group project app
       * cd /var/www/html/<br>
       * umask<br>
         * if you get 0002 back permissions are set up correctly<br>
-       
-#how to set up MySQL table 
+ * add the function calls to the server
+   * copy the files from this github repo into the /var/www/html/ directory 
+# how to set up MySQL table 
+* open firefox on the server
+  * go to localhost/phpmyadmin
+    * login and select import table
+    * import the MySQLBuild.sql file
