@@ -24,6 +24,7 @@ if(mysqli_connect_errno()){
 
 //$sql = "INSERT INTO notes ('apartmentid','userid','noteName','data','listType','username') VALUES ('". $aptID ."','". $userID . "','". $noteName . "','". $noteText ."','". $listType ."','". $name ."')";
 $sql = "INSERT INTO `notes` (`username`, `apartmentid`, `userid`, `noteName`, `data`, `listType`) VALUES ('".$name."','".$aptID."', '".$userID."', '".$noteName."', '".$noteText."', '".$listType."')";
+
 if(mysqli_query($connection, $sql)){  //creates user, echo nothing if successful, echo error message and kills script if failed
         echo "Successfully added to table ";}
         else{

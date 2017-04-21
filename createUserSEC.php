@@ -1,13 +1,17 @@
 <?php
-#createUser(String username,String email,String password)
-#returns userid of new user
+#POST
+#createUserSEC(username,password,email)
+#creates user with POST method to be more secure than GET method 
+	#depricate GET version once this is working
 
+$body = file_get_contents('php://input'); //gets POST body
 
-				#add user to the user table
+$json = json_decode($body,true); //converts to json (format we are using)
 
-$username=$_GET['username'];    //store username from url get
-$pass=$_GET['password'];        //store userid from url get
-$email=$_GET['email'];
+$username=$json['username'];    
+$pass=$json['password'];        
+$email=$json['email'];
+
 $connection=mysqli_connect("127.0.0.1","root","33803380","3380"); //connect to the server
 //TODO make this connection secure when we launch for real
 if(mysqli_connect_errno()){
@@ -23,10 +27,9 @@ if(mysqli_query($connection, $sql)){  //creates user, echo nothing if successful
 	echo "Failed to add user " . mysqli_error($connection); //will fail on user existing(expected error) or other(unexpected)
 	die("");}
 
-
-
 				#output new user info
 
+//not working
 $query = "SELECT * FROM user WHERE email='". $email ."'"; //store sql statement to pass in the msqi quessy function
 $result = mysqli_query($connection,$query);     //store query so its easier to deal with
 
@@ -40,3 +43,4 @@ print json_encode($row);        //print out the array in json format to be parse
 mysqli_close($connection);
 //disconnect
  ?>
+

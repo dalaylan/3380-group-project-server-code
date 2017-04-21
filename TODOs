@@ -1,0 +1,10 @@
+FOR FRIDAY:
+[ ] #check that all posts return the id of created object 
+[X] #test all green methods
+[ ] #standardize name outputs with what Sarah wants
+[ ] #copy Server Calls to reference page (reference.txt
+[ ] #how to make server (build apache and SQL instructions)
+
+BUGS:
+[ ] #fix SQL injection vulnerabilities
+
