@@ -9,3 +9,4 @@ BUGS:
 [ ] #fix SQL injection vulnerabilities
 [ ] #fix the auto add user to new apartment for createApartment.php
 [ ] #check that all posts return the id of created object
+[ ] #login compare is not case sensitive (switch to strcompare())
