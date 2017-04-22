@@ -1,6 +1,6 @@
 <?php
 #POST
-#createUserSEC(username,password,email)
+#createUserSEC(String username,String password,String email)
 #creates user with POST method to be more secure than GET method 
 	#depricate GET version once this is working
 
@@ -18,7 +18,7 @@ if(mysqli_connect_errno()){
         die("Database connection failed: " . mysqli_connect_error() . "(" . mysqli_connect_errno() . ")" ); }
         //error code for if connection fails
 
-$sql =  "INSERT INTO `user` (`id`, `name`, `Apartment`, `email`, `password`, `emergency name`, `emergency contact`, `profile pic`) VALUES (NULL, '". $username ."', NULL, '" . $email . "', '" . $pass . "', NULL, NULL, NULL)"; //store sql statement to pass in the msqi quessy function
+$sql =  "INSERT INTO `user` (`userID`, `username`, `ApartmentID`, `email`, `password`, `emergency name`, `emergency contact`, `profile pic`) VALUES (NULL, '". $username ."', NULL, '" . $email . "', '" . $pass . "', NULL, NULL, NULL)"; //store sql statement to pass in the msqi quessy function
 //$result = mysqli_query($connection,$query);     //store query so its easier to deal with
 
 if(mysqli_query($connection, $sql)){  //creates user, echo nothing if successful, echo error message and kills script if failed

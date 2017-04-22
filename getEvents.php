@@ -11,7 +11,7 @@ if(mysqli_connect_errno()){
         die("Database connection failed: " . mysqli_connect_error() . "(". mysqli_connect_errno() . ")" ); }
         //error code for if connection fails
 
-$query = "SELECT * FROM events WHERE apartmentid LIKE ". $aptID; //store sql statement to$
+$query = "SELECT * FROM events WHERE apartmentID LIKE ". $aptID; //store sql statement to$
 $result = mysqli_query($connection,$query);     //store query so its easie$
 
 if(!$result){ die("Database query failed.");} //error code for failed query

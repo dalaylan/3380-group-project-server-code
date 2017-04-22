@@ -1,11 +1,11 @@
 FOR FRIDAY:
-[ ] #check that all posts return the id of created object 
+ 
 [X] #test all green methods
-[ ] #standardize name outputs with what Sarah wants
-[ ] #copy Server Calls to reference page (reference.txt)
+[X] #standardize name outputs with what Sarah wants
+[X] #copy Server Calls to reference page (reference.txt)
 [X] #how to make server (build apache and SQL instructions)
-[ ] #clear database, reset all prim keys, build samples in tables, export table to 'MySQLBuild.sql'
 
 BUGS:
 [ ] #fix SQL injection vulnerabilities
-
+[ ] #fix the auto add user to new apartment for createApartment.php
+[ ] #check that all posts return the id of created object

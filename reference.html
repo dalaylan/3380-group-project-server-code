@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+Reference page for all server calls <br><br>
+</head
+</pre>
+<pre>
+<font size="+3"><b>POST Methods:</b></font>
+createNote(String name, int userID, int apartmentID, String noteName, text note)
+	*creates note in the notes table<br>
+createEvent(String date, String name, int userID,int apartmentID)
+	*creates event with data sent in post<br>
+requestToJoinApartment(int userId,int ApartmentID)
+	*autojoins to apartment for now<br>
+createGroupMessage(int senderID,int apartmentID,String MSGText)
+	*creates event with data sent in post<br>
+createUserSEC(String username,String password,String email)
+	*creates user with POST method to be more secure than GET method <br>
+deleteEvent(int id)
+	*deletes event<br>
+createApartment(int owner,String AptName,String address)
+	*creates a new apartment, adds the user to the apt, and returns the apt id<br>
+deleteApartment(int id)
+	*deletes apartment<br>
+deleteUser(int id)
+	*deletes user<br>
+deleteNote(int id)
+	*deletes note<br>
+login(String username,String password)
+	*confirms if username/pass match<br>
+</pre>
+
+<pre>
+<font size="+3"><b>GET Methods:</b></font>
+createUser(String username,String password,String email)
+	*creates user andreturns userid of new user<br>
+getUserInfo(String username,int userID)
+	*display row in json format<br>
+getAllUsers(int apartmentID)
+	*display all users where ApartmentID matches<br>
+getNotes(int apartmentID)
+	*returns all notes listed under the apartment<br>
+addUserToApartment(int userID,int apartmentID)
+	*adds user to apartment<br>
+getApartments(int apartmentID)
+	*displays all users where ApartmentID matches<br>
+getMessages(int apartmentID)
+	*displays all messages in json rows<br>
+getEvents(int apartmentID)
+	*return all events in apartment as json rows<br>
+</pre>
+
+
+</html>

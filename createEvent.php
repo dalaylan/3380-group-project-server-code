@@ -10,7 +10,7 @@ $json = json_decode($body,true);
 $username =   $json['username'];
 $userID = $json['userID'];
 $aptID =  $json['apartmentID'];
-$EventName = $json['eventName'];
+$EventName = $json['name'];
 $startDate = $json['startDate'];
 $endDate = $json['endDate'];
 
@@ -21,7 +21,7 @@ if(mysqli_connect_errno()){
         //error code for if connection fails
 
 //$sql = "INSERT INTO 'events' ('apartmentid','userid','startDate','name','creator','endDate') VALUES ('".$aptID."','".$userID."','".$startDate."','".$EventName."','".$username."','".$endDate."')";
-  $sql = "INSERT INTO `events` (`apartmentid`, `userid`, `startDate`, `endDate`, `name`, `creator`) VALUES ('".$aptID."', '".$userID."', '".$startDate."', '".$endDate."', '".$EventName."', '".$username."')";
+  $sql = "INSERT INTO `events` (`apartmentID`, `userID`, `startDate`, `endDate`, `name`, `creator`) VALUES ('".$aptID."', '".$userID."', '".$startDate."', '".$endDate."', '".$EventName."', '".$username."')";
 
 if(mysqli_query($connection, $sql)){  //creates user, echo nothing if successful, echo error message and kills script if failed
         echo "Successfully added to table ";}

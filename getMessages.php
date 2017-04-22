@@ -10,7 +10,7 @@ if(mysqli_connect_errno()){
         //error code for if connection fails
 
 
-$query = "SELECT * FROM messages WHERE `apartment id` LIKE ".$aptID; //store sql statement
+$query = "SELECT * FROM messages WHERE `apartmentID` LIKE ".$aptID; //store sql statement
 $result = mysqli_query($connection,$query);     //store query so its easie$
 
 if(!$result){ die("Database query failed.");} //error code for failed query
