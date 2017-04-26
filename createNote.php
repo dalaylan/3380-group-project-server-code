@@ -26,9 +26,24 @@ if(mysqli_connect_errno()){
 $sql = "INSERT INTO `notes` (`username`, `apartmentID`, `userID`, `noteName`, `data`, `listType`) VALUES ('".$name."','".$aptID."', '".$userID."', '".$noteName."', '".$noteText."', '".$listType."')";
 
 if(mysqli_query($connection, $sql)){  //creates user, echo nothing if successful, echo error message and kills script if failed
-        echo "Successfully added to table ";}
+        echo "";}
         else{
         echo "Failed to add note " . mysqli_error($connection); //will fail on user existing(expected error) or other(unexpected)
         die("");}
+
+
+			#return ID of note created
+
+
+$query = "SELECT * FROM notes where id=LAST_INSERT_ID()"; //store sql statement to pass in the msqi query function
+$result = mysqli_query($connection,$query);     //store query so its easier to deal with
+
+if(!$result){ die("Database query failed on ID return.");} //error code for failed query
+
+$row = mysqli_fetch_assoc($result); //store row in an assoc array
+
+echo $row['id'];
+
+
 mysqli_close($connection);
 ?>

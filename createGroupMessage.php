@@ -19,10 +19,23 @@ if(mysqli_connect_errno()){
 
 $sql = "INSERT INTO `messages` (`MSGText`, `apartmentID`, `senderID`) VALUES ('".$MSGText."', '".$apartmentID."', '".$senderID."')";
 if(mysqli_query($connection, $sql)){  //creates user, echo nothing if successful, echo error message and kills script if failed
-        echo "Successfully added to table ";}
+        echo "";}
         else{
         echo "Failed to add note " . mysqli_error($connection);
         die("");}
+
+			#return ID of message created
+
+
+$query = "SELECT * FROM messages where id=LAST_INSERT_ID()"; //store sql statement to pass in the msqi query function
+$result = mysqli_query($connection,$query);     //store query so its easier to deal with
+
+if(!$result){ die("Database query failed on ID return.");} //error code for failed query
+
+$row = mysqli_fetch_assoc($result); //store row in an assoc array
+
+echo $row['id']; //print out the id of the row created last so it can be stored locally
+
 
 mysqli_close($connection);
 ?>
