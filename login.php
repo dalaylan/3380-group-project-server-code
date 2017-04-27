@@ -25,7 +25,7 @@ if(!$result){ die("Database query failed.");} //error code for failed query
 $row = mysqli_fetch_assoc($result);
 //print_r($row);
 echo ($row['email']===$email && $row['password']===$pass) ? $row['UserID'] :"invalid email/password combination.";
-
+//returns UserID if true, else invalid combo message
 				#result
 
 
