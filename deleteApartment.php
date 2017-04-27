@@ -1,7 +1,7 @@
 <?php
 #POST
 #deleteApartment(apartmentID)
-#deletesApartment
+#deletesApartment and removes it from all users associated with it
 
 $body = file_get_contents('php://input'); //gets POST body
 $json = json_decode($body,true); //converts to json (format we are using)
@@ -23,6 +23,22 @@ if(mysqli_query($connection, $sql)){  //creates user, echo nothing if successful
 	else{
 	echo "Failed to remove user " . mysqli_error($connection); //will fail on user existing(expected error) or other(unexpected)
 	die("");}
+
+			#remove from all users
+
+
+$query = "UPDATE user SET ApartmentID = -1 WHERE ApartmentID LIKE ".$aptID;
+
+
+#$query = "SELECT * FROM user WHERE ApartmentID LIKE ". $aptID; //store sql statement to$
+$result = mysqli_query($connection,$query);     //store query so its easie$
+
+if(!$result){ die("Database query failed on removal of apartment users.");} //error code for failed query
+
+#while($row = mysqli_fetch_assoc($result)){ //store row in an array
+#$userID = $row['UserID'];
+#$sql = "UPDATE `user` SET `ApartmentID` = NULL WHERE UserID=".$userID; //remove link to apartment from user
+#}
 
 mysqli_close($connection);
 ?>

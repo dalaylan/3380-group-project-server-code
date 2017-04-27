@@ -6,13 +6,13 @@ Reference page for all server calls <br><br>
 </pre>
 <pre>
 <font size="+3"><b>POST Methods:</b></font>
-createNote(String name, int userID, int apartmentID, String noteName, text note)
+createNote(String username, int userID, int apartmentID, String noteName, text data,int listType)
 	*creates note in the notes table<br>
-createEvent(String date, String name, int userID,int apartmentID)
+createEvent(String startDate, String name, int userID,int apartmentID,String endDate)
 	*creates event with data sent in post<br>
 requestToJoinApartment(int userId,int ApartmentID)
 	*autojoins to apartment for now<br>
-createGroupMessage(int senderID,int apartmentID,String MSGText)
+createGroupMessage(int userID,int apartmentID,String MSGText)
 	*creates event with data sent in post<br>
 createUserSEC(String username,String password,String email)
 	*creates user with POST method to be more secure than GET method <br>
@@ -21,7 +21,7 @@ deleteEvent(int id)
 createApartment(int owner,String AptName,String address)
 	*creates a new apartment, adds the user to the apt, and returns the apt id<br>
 deleteApartment(int id)
-	*deletes apartment<br>
+	*deletes apartment from apartments and all users associated with it<br>
 deleteUser(int id)
 	*deletes user<br>
 deleteNote(int id)

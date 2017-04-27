@@ -16,13 +16,15 @@ $connection=mysqli_connect("127.0.0.1","root","33803380","3380"); //connect to t
 if(mysqli_connect_errno()){
         die("Database connection failed: " . mysqli_connect_error() . "(" . mysqli_connect_errno() . ")" ); }
         //error code for if connection fails
-
-$query = "SELECT * FROM user WHERE email LIKE ". $email; //store sql statement to$
+$query = "SELECT * FROM user WHERE email LIKE '". $email."'"; //store sql statement to$
 $result = mysqli_query($connection,$query);     //store query so its easie$
-
+//echo "query= ".$query."\n";
 if(!$result){ die("Database query failed.");} //error code for failed query
+//echo "wut2";
+
 $row = mysqli_fetch_assoc($result);
-echo ($row['email']===$email && $row['password']===$pass) ? 'true' :"invalid email/password combination.";
+//print_r($row);
+echo ($row['email']===$email && $row['password']===$pass) ? $row['UserID'] :"invalid email/password combination.";
 
 				#result
 
