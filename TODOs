@@ -7,5 +7,5 @@ FOR FRIDAY:
 
 BUGS:
 [ ] #fix SQL injection vulnerabilities
-[ ] #fix the auto add user to new apartment for createApartment.php
-[ ] #check that all posts return the id of created object
+[X] #fix the auto add user to new apartment for createApartment.php
+[X] #check that all posts return the id of created object
